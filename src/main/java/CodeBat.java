@@ -16,5 +16,26 @@ public class CodeBat {
 
     }
 
+    public String front22(String str) {
+        String[] resultArray = str.split("(?!^)");
+        String result = "";
+        if(resultArray.length >= 2){
+            result = resultArray[0] + resultArray[1];
+            for (int i = 0; i < resultArray.length; i++){
+                result += resultArray[i];
+            }
+            return result + resultArray[0] + resultArray[1];
+        }
+        result = resultArray[0] + resultArray[0] + resultArray[0];
+        return result;
+    }
+
+    public boolean sleepIn(boolean weekday, boolean vacation) {
+        if(weekday == true && !vacation == true){
+            return false;
+        }
+        return true;
+    }
+
 }
 

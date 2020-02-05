@@ -32,6 +32,25 @@ public class CodeBatTest {
         assertEquals(false, codeBat.or35(4));
     }
 
+    @Test
+    public void lessThanTwoCharsFront22(){
+        assertEquals("aaa", codeBat.front22("a"));
+    }
+
+    @Test
+    public void twoCharsOrMoreFront22(){
+        assertEquals("dodogdo", codeBat.front22("dog"));
+    }
+
+    @Test
+    public void canSleepIn(){
+        assertEquals(true, codeBat.sleepIn(false, true));
+        assertEquals(true, codeBat.sleepIn(true, true));
+        assertEquals(false, codeBat.sleepIn(true, false));
+        assertEquals(true, codeBat.sleepIn(false, false));
+
+    }
+
 
 
 }
