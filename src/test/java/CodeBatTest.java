@@ -18,6 +18,20 @@ public class CodeBatTest {
         assertEquals("gdogg", codeBat.backAround("dog"));
     }
 
+    @Test
+    public void willReturnTrueIfNonNegativeNumberIsDivisbleBy3Or5(){
+        assertEquals(true, codeBat.or35(3));
+        assertEquals(true, codeBat.or35(5));
+        assertEquals(true, codeBat.or35(50));
+        assertEquals(true, codeBat.or35(30));
+    }
+
+    @Test
+    public void willReturnFalseIfNonNegativeNumberIsNotDivisbleBy3Or5(){
+        assertEquals(false, codeBat.or35(2));
+        assertEquals(false, codeBat.or35(4));
+    }
+
 
 
 }
