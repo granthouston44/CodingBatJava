@@ -82,6 +82,13 @@ public class CodeBat {
     }
 
 
+    public boolean parrotTrouble(boolean talking, int hour) {
+        boolean outOfHours = (hour < 7 || hour > 20);
+        return (talking && outOfHours);
+    }
+
+
+
 
 }
 

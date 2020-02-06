@@ -65,7 +65,16 @@ public class CodeBatTest {
 
     @Test
     public void diff21(){
+    assertEquals(2, codeBat.diff21(19));
+    assertEquals(11, codeBat.diff21(10));
+    assertEquals(21, codeBat.diff21(0));
+    }
 
+    @Test
+    public void parrotTrouble(){
+        assertEquals(true, codeBat.parrotTrouble(true, 6));
+        assertEquals(false, codeBat.parrotTrouble(true, 7));
+        assertEquals(false, codeBat.parrotTrouble(false, 6));
     }
 
 }
