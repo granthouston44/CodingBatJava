@@ -46,7 +46,7 @@ public class CodeBat {
             trouble = true;
         }
         return trouble;
-
+    }
         /*
         A better way to do this would be
         if (aSmile && bSmile) {
@@ -65,7 +65,15 @@ public class CodeBat {
 
          */
 
-    }
+        public int sumDouble(int a, int b) {
+            int sum = a + b;
+            if(a == b){
+                sum *= 2;
+            }
+            return sum;
+        }
+
+
 
 }
 

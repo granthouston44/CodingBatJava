@@ -58,6 +58,9 @@ public class CodeBatTest {
         assertEquals(true, codeBat.monkeyTrouble(true, true));
     }
 
-
+    @Test
+    public void sumDouble(){
+        assertEquals(8, codeBat.sumDouble(2,2));
+    }
 
 }
