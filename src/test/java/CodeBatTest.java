@@ -50,6 +50,13 @@ public class CodeBatTest {
         assertEquals(true, codeBat.sleepIn(false, false));
 
     }
+    @Test
+    public void inTrouble(){
+        assertEquals(false, codeBat.monkeyTrouble(false, true));
+        assertEquals(false, codeBat.monkeyTrouble(true, false));
+        assertEquals(true, codeBat.monkeyTrouble(false, false));
+        assertEquals(true, codeBat.monkeyTrouble(true, true));
+    }
 
 
 
