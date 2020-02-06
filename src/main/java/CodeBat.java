@@ -73,6 +73,14 @@ public class CodeBat {
             return sum;
         }
 
+    public int diff21(int n) {
+        int sum = 21-n;
+        if(n > 21){
+            sum *= 2;
+        }
+        return Math.abs(sum);
+    }
+
 
 
 }
