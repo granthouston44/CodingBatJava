@@ -63,4 +63,9 @@ public class CodeBatTest {
         assertEquals(8, codeBat.sumDouble(2,2));
     }
 
+    @Test
+    public void diff21(){
+
+    }
+
 }
