@@ -85,4 +85,9 @@ public class CodeBatTest {
         assertEquals(false, codeBat.makes10(8,5));
     }
 
+    @Test
+    public void posNeg(){
+        assertEquals(false, codeBat.posNeg(-4,-5, false));
+    }
+
 }
