@@ -87,6 +87,10 @@ public class CodeBat {
         return (talking && outOfHours);
     }
 
+    public boolean makes10(int a,int b){
+            return (a == 10 || b == 10 || a + b == 10);
+    }
+
 
 
 

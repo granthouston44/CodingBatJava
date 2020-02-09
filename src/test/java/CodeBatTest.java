@@ -77,4 +77,12 @@ public class CodeBatTest {
         assertEquals(false, codeBat.parrotTrouble(false, 6));
     }
 
+    @Test
+    public void makesTen(){
+        assertEquals(true, codeBat.makes10(10,5));
+        assertEquals(true, codeBat.makes10(1,10));
+        assertEquals(true, codeBat.makes10(5,5));
+        assertEquals(false, codeBat.makes10(8,5));
+    }
+
 }
