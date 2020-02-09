@@ -91,6 +91,10 @@ public class CodeBat {
             return (a == 10 || b == 10 || a + b == 10);
     }
 
+    public boolean nearHundred(int n) {
+        return (Math.abs(100-n) <= 10 || Math.abs(200-n) <= 10);
+    }
+
 
 
 
