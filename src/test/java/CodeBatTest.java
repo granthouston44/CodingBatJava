@@ -1,15 +1,18 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class CodeBatTest {
 
     private CodeBat codeBat;
+    private Algorithms algorithms;
 
     @Before
     public void before(){
         codeBat = new CodeBat();
+        algorithms = new Algorithms();
     }
 
     @Test
@@ -88,6 +91,24 @@ public class CodeBatTest {
     @Test
     public void posNeg(){
         assertEquals(false, codeBat.posNeg(-4,-5, false));
+    }
+
+    @Test
+    public void notString(){
+        assertEquals("not bad", codeBat.notString("not bad"));
+    }
+
+    @Test
+    public void bubbleSort(){
+        int[] myArray = new int[]{4,2,1,3};
+        int[] expected = new int[]{1,2,3,4};
+        assertArrayEquals(expected, algorithms.bubbleSort(myArray));
+    }
+
+    @Test
+    public void startHi(){
+        assertEquals(true, codeBat.startHi("hi"));
+        assertEquals(false, codeBat.startHi("Hello hi"));
     }
 
 }

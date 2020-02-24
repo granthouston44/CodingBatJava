@@ -65,17 +65,17 @@ public class CodeBat {
 
          */
 
-        public int sumDouble(int a, int b) {
-            int sum = a + b;
-            if(a == b){
-                sum *= 2;
-            }
-            return sum;
+    public int sumDouble(int a, int b) {
+        int sum = a + b;
+        if (a == b) {
+            sum *= 2;
         }
+        return sum;
+    }
 
     public int diff21(int n) {
-        int sum = 21-n;
-        if(n > 21){
+        int sum = 21 - n;
+        if (n > 21) {
             sum *= 2;
         }
         return Math.abs(sum);
@@ -87,36 +87,71 @@ public class CodeBat {
         return (talking && outOfHours);
     }
 
-    public boolean makes10(int a,int b){
-            return (a == 10 || b == 10 || a + b == 10);
+    public boolean makes10(int a, int b) {
+        return (a == 10 || b == 10 || a + b == 10);
     }
 
     public boolean nearHundred(int n) {
-        return (Math.abs(100-n) <= 10 || Math.abs(200-n) <= 10);
+        return (Math.abs(100 - n) <= 10 || Math.abs(200 - n) <= 10);
     }
 
     public boolean posNeg(int a, int b, boolean negative) {
         boolean result = false;
-        if(negative == false){
-            if(a < 0 && b < 0) {
+        if (negative == false) {
+            if (a < 0 && b < 0) {
                 result = false;
-            }
-            else if(a <0 || b <0){
+            } else if (a < 0 || b < 0) {
                 result = true;
             }
-        }
-        else if (negative == true){
+        } else if (negative == true) {
             if (a < 0 && b < 0) {
                 result = true;
-            }
-            else{
+            } else {
                 result = false;
             }
         }
         return result;
     }
 
+    public String notString(String str) {
+        String result = "";
+        String[] array = str.split("(?!^)");
+        String not = "";
+        if (array.length < 3) {
+            result = "not " + str;
+        } else {
+            for (int i = 0; i <= 2; i++) {
 
+                not += array[i];
+            }
+            if (!not.contains("not")) {
+                result = "not " + str;
+            } else {
+                result = str;
+            }
+        }
+        return result;
+    }
+
+    public String missingChar(String str, int n) {
+        StringBuilder sb = new StringBuilder(str);
+        sb.deleteCharAt(n);
+        String result = sb.toString();
+        return result;
+    }
+
+    public boolean startHi(String str) {
+        String[] strArr = str.split("(?!^)");
+        String newstr = "";
+        if(strArr.length >= 2) {
+            for (int i = 0; i < 2; i++) {
+                newstr += strArr[i];
+            }
+        }
+
+            return (newstr.contains("hi"));
+
+    }
 
 
 }
