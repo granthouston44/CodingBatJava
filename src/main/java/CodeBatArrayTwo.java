@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -54,6 +55,21 @@ public class CodeBatArrayTwo {
             }
         }
         return max-min;
+    }
+
+    public ArrayList<Integer> sumPairs(ArrayList<Integer> nums, int sum){
+        int result = 0;
+        ArrayList pairs = new ArrayList();
+        for(int i = 0; i < nums.size(); i++){
+            for(int j = i + 1; j < nums.size(); j++){
+                result = nums.get(i) + nums.get(j);
+                if (result == sum){
+                    pairs.add(nums.get(i));
+                    pairs.add(nums.get(j));
+                }
+            }
+        }
+        return pairs;
     }
 
 }

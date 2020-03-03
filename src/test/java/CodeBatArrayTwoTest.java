@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -35,6 +37,22 @@ public class CodeBatArrayTwoTest {
         assertEquals(3,codeBatArrayTwo.countEvens(array));
     }
 
+    @Test
+    public void sumPairs(){
+        ArrayList<Integer> array = new ArrayList();
+        ArrayList<Integer> arrayResult = new ArrayList();
 
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        array.add(4);
+
+        arrayResult.add(1);
+        arrayResult.add(4);
+        arrayResult.add(2);
+        arrayResult.add(3);
+        assertEquals(arrayResult, codeBatArrayTwo.sumPairs(array,5));
+
+    }
 
 }
