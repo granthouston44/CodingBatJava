@@ -169,10 +169,21 @@ public class CodeBat {
 
         }
         return missingNum;
-
-
     }
 
+    public int duplicate(Integer[] someArray){
+        Arrays.sort(someArray, Collections.<Integer>reverseOrder());
+        int result;
+        int dupe = 0;
+        for(int i = 0; i < someArray.length; i++){
+            result = someArray[i] - someArray[i+1];
+            if(result == 0){
+                dupe = someArray[i];
+                return dupe;
+            }
+        }
+        return dupe;
+    }
 
 }
 

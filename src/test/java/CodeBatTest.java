@@ -119,4 +119,12 @@ public class CodeBatTest {
         assertEquals(12, codeBat.missingNumber(anotherArray));
     }
 
+    @Test
+    public void duplicateNum(){
+        Integer[] myArray = new Integer[]{9,10,11,1,2,2,5,6,7,8};
+        Integer[] anotherArray = new Integer[]{9,10,13,13,1,2,3,4,5,6,7,8};
+        assertEquals(2, codeBat.duplicate(myArray));
+        assertEquals(13, codeBat.duplicate(anotherArray));
+    }
+
 }
