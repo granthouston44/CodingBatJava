@@ -111,4 +111,12 @@ public class CodeBatTest {
         assertEquals(false, codeBat.startHi("Hello hi"));
     }
 
+    @Test
+    public void missingNum(){
+        Integer[] myArray = new Integer[]{9,10,11,1,2,4,5,6,7,8};
+        Integer[] anotherArray = new Integer[]{9,10,11,13,1,2,3,4,5,6,7,8};
+        assertEquals(3, codeBat.missingNumber(myArray));
+        assertEquals(12, codeBat.missingNumber(anotherArray));
+    }
+
 }

@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 public class CodeBat {
 
 
@@ -150,6 +153,23 @@ public class CodeBat {
         }
 
             return (newstr.contains("hi"));
+
+    }
+
+    public int missingNumber(Integer[] someArray){
+        Arrays.sort(someArray, Collections.<Integer>reverseOrder());
+        int result = 0;
+        int missingNum = 0;
+        for(int i = 0; i < someArray.length; i++){
+            result = someArray[i] - someArray[i+1];
+            if(result > 1) {
+                missingNum = someArray[i] - 1;
+                return missingNum;
+            }
+
+        }
+        return missingNum;
+
 
     }
 
