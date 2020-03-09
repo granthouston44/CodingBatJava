@@ -72,4 +72,25 @@ public class CodeBatArrayTwo {
         return pairs;
     }
 
+    public int centeredAverage(int[] nums) {
+    int total = 0;
+    int result = 0;
+    int max = nums[0];
+    int min = nums[nums.length-1];
+
+    for(int i = 0; i < nums.length ; i++){
+        if(max < nums[i]){
+            max = nums[i];
+        }
+        if(min > nums[i]){
+             min = nums[i];
+        }
+         total += nums[i];
+    }
+
+    result = (total - max - min) / (nums.length-2);
+    return result;
+    }
+
+
 }

@@ -55,4 +55,10 @@ public class CodeBatArrayTwoTest {
 
     }
 
+    @Test
+    public void centeredAverage(){
+        int[] someArray = new int[]{1000, 0, 1, 99};
+        assertEquals(50, codeBatArrayTwo.centeredAverage(someArray));
+    }
+
 }
