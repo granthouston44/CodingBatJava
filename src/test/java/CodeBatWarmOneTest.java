@@ -118,4 +118,11 @@ public class CodeBatWarmOneTest {
         assertEquals("adedbc", codeBatWarmOne.delDel("adedbc"));
     }
 
+
+    @Test
+    public void mixStart(){
+        assertEquals(true, codeBatWarmOne.mixStart("mix snacks"));
+        assertEquals(true, codeBatWarmOne.mixStart("pix snacks"));
+        assertEquals(false, codeBatWarmOne.mixStart("piz snacks"));
+    }
 }

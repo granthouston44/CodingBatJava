@@ -184,7 +184,16 @@ public class CodeBatWarmOne {
         return result = stringBuilder.toString();
     }
 
-
+    public boolean mixStart(String str){
+        boolean result = false;
+        if(str.length() < 3){
+            result = false;
+        }
+        else if(str.substring(1,3).equals("ix")){
+            result = true;
+        }
+        return result;
+    }
 
 
 }
