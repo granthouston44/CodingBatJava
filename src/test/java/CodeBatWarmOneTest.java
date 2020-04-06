@@ -111,6 +111,11 @@ public class CodeBatWarmOneTest {
         assertEquals(false, codeBatWarmOne.startHi("Hello hi"));
     }
 
-
+    @Test
+    public void delDel(){
+        assertEquals("abc",codeBatWarmOne.delDel("adelbc"));
+        assertEquals("aHello", codeBatWarmOne.delDel("adelHello"));
+        assertEquals("adedbc", codeBatWarmOne.delDel("adedbc"));
+    }
 
 }

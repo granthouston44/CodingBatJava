@@ -175,6 +175,17 @@ public class CodeBatWarmOne {
         return ((a >= 13 && a <= 19)||(b >= 13 && b<= 19)) && (a != b);
     }
 
+    public String delDel(String str){
+        String result = "";
+        StringBuilder stringBuilder = new StringBuilder(str);
+        if(str.indexOf("del", 1) == 1){
+            stringBuilder.delete(1,4);
+        }
+        return result = stringBuilder.toString();
+    }
+
+
+
 
 }
 
